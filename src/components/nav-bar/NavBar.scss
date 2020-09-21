@@ -1,0 +1,26 @@
+@import '../../style/function';
+
+$navbar-prefix-cls: 'navbar';
+
+.#{$navbar-prefix-cls} {
+  margin-bottom: 0;
+  padding: rem(8px) 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: space-between;
+
+  &-link {
+    position: relative;
+    display: block;
+    color: var(--gray);
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      outline: none;
+      color: var(--primary);
+    }
+  }
+}

@@ -1,0 +1,14 @@
+$logo-prefix-cls: 'logo';
+
+.#{$logo-prefix-cls} {
+  display: none;
+  margin-bottom: 1.25rem;
+
+  & > .fill-primary {
+    fill: var(--primary);
+  }
+
+  @media (min-width: 1200px) {
+    display: block;
+  }
+}
