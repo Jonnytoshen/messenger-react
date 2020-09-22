@@ -1,4 +1,5 @@
-@import '../../style/abstracts/function';
+@import '../../style/abstracts/function',
+        '../../style/abstracts/mixins';
 
 $navbar-prefix-cls: 'navbar';
 
@@ -11,16 +12,28 @@ $navbar-prefix-cls: 'navbar';
   flex-grow: 1;
   justify-content: space-between;
 
-  &-link {
-    position: relative;
-    display: block;
-    color: var(--gray);
-    cursor: pointer;
+  @include respond-to('lg') {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 
-    &:hover,
-    &:focus {
-      outline: none;
-      color: var(--primary);
+  @include respond-to('xl') {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &-item {
+    @include respond-to('xl') {
+      margin-top: rem(40px);
+    }
+  }
+
+  &-item-blank {
+    display: none;
+
+    @include respond-to('xl') {
+      display: block;
+      flex-grow: 1;
     }
   }
 }
