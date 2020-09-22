@@ -1,19 +1,19 @@
 import React from 'react';
 import './Icon.scss';
 
-export type LogoSize = 'small' | 'default' | 'large';
+export type IconSize = 'small' | 'default' | 'large';
 
-export interface LogoProps {
+export interface IconProps {
   type: string;
-  size?: LogoSize
+  size?: IconSize
 }
 
 export interface LogoState {
   className: string
 }
 
-class Icon extends React.Component<LogoProps, LogoState> {
-  constructor(props: LogoProps) {
+class Icon extends React.Component<IconProps, LogoState> {
+  constructor(props: IconProps) {
     super(props);
     const classNames: string[] = [];
     classNames.push(`icon-${props.type}`);
