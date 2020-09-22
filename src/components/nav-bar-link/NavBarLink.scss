@@ -1,0 +1,28 @@
+@import '../../style/abstracts/function';
+
+$navbar-link-prefix-cls: 'navbar-link';
+
+.#{$navbar-link-prefix-cls} {
+  position: relative;
+  display: block;
+  color: var(--gray);
+  cursor: pointer;
+
+  &:hover,
+  &:focus,
+  &.#{$navbar-link-prefix-cls}-active {
+    text-decoration: none;
+    color: var(--primary);
+  }
+
+  &-dot {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: rem(6px);
+    height: rem(6px);
+    border-radius: 50%;
+    background-color: var(--primary);
+    transform: translate(-50%, 50%);
+  }
+}
