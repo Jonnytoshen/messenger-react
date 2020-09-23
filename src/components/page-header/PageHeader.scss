@@ -1,0 +1,12 @@
+@import '../../style/abstracts/function';
+
+$page-header-prefix-cls: 'page-header';
+
+.#{$page-header-prefix-cls} {
+  margin-bottom: rem(20px);
+
+  &-title {
+    margin-bottom: 0;
+    font-weight: 700;
+  }
+}
