@@ -11,15 +11,16 @@ export interface AvatarProps {
   size?: AvatarSize;
   title?: string;
   status?: AvatarStatus,
-  showDot?: boolean
+  showDot?: boolean,
+  className?: string
 }
 
 
 class Avatar extends React.Component<AvatarProps> {
 
   render() {
-    const { status, size, src, title } = this.props;
-    const classnames = classNames({
+    const { className, status, size, src, title } = this.props;
+    const classnames = classNames(className, {
       'avatar': true,
       'avatar-small': size === 'small',
       'avatar-large': size === 'large',
