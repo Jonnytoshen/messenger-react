@@ -1,3 +1,16 @@
+// colors
+$success-color: #52c41a;
+$processing-color: #1890ff;
+$normal-color: #d9d9d9;
+$error-color: #ff4d4f;
+$warning-color: #faad14;
+
+$preset-colors: pink, magenta, red, volcano, orange, yellow, gold, cyan, lime, green, blue, geekblue,purple;
+
+$shadow-color-inverse: #fff;
+
+$ease-in-out: cubic-bezier(.645,.045,.355,1);
+
 $breakpoints: (
   'xs': (min-width: 0px),
   'sm': (min-width: 576px),
