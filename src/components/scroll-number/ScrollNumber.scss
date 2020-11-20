@@ -1,0 +1,33 @@
+@import '../../style/abstracts/variables',
+        '../../style//abstracts//function';
+
+$scroll-number-prefix-cls: 'scroll-number';
+$scroll-number-height: rem(18px);
+
+.#{$scroll-number-prefix-cls} {
+  overflow: hidden;
+  display: inline-block;
+  top: 0;
+  padding: 0 6px;
+  min-width: $scroll-number-height;
+  height: $scroll-number-height;
+  line-height: $scroll-number-height;
+  border-radius: $scroll-number-height / 2;
+  font-size: rem(12px);
+  color: #fff;
+  background-color: #0176ff;
+
+  &-only {
+    display: inline-block;
+    height: $scroll-number-height;
+    transition: all 0.3s $ease-in-out;
+    & > p.#{$scroll-number-prefix-cls}-only-unit {
+      height: $scroll-number-height;
+      margin: 0;
+    }
+  }
+
+  &-symbol {
+    vertical-align: top;
+  }
+}
